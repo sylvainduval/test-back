@@ -1,0 +1,14 @@
+default:
+    formatters:
+        pretty: true
+    extensions:
+        FriendsOfBehat\SymfonyExtension:
+            bootstrap: features/bootstrap/bootstrap.php
+            kernel:
+                class: App\Kernel
+    suites:
+        default:
+            contexts:
+                - App\Tests\Behat\SharingContext
+                - App\Tests\Behat\DemoContext
+                - App\Tests\Behat\ApiContext
